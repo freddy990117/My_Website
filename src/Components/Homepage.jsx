@@ -29,6 +29,7 @@ const Homepage = () => {
         <section className="introduce">
           <h1>嗨,我是 Freddy</h1>
           <h2>我是一位擁有硬體維修背景、目前積極轉職為前端工程師的開發者。</h2>
+          <p>我擅長使用 React 打造互動式網站，並從使用者的角度設計網頁畫面。</p>
         </section>
         <section className="myPicture"></section>
       </section>

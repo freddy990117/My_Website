@@ -54,8 +54,16 @@ header {
       font-size: 5rem;
       color: #e0e0e0;
     }
+    h2 {
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
   }
   .myPicture {
+    margin-right: 8rem;
     flex: 4;
     background-image: url(../public/image.png);
     background-size: contain;
