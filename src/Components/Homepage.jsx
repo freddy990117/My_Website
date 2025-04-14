@@ -26,7 +26,11 @@ const Homepage = () => {
         </nav>
       </header>
       <section id="Picture" className="Picture">
-        Picture
+        <section className="introduce">
+          <h1>嗨,我是 Freddy</h1>
+          <h2>我是一位擁有硬體維修背景、目前積極轉職為前端工程師的開發者。</h2>
+        </section>
+        <section className="myPicture"></section>
       </section>
       <section id="aboutMe" className="aboutMe">
         About-me
