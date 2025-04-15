@@ -85,3 +85,9 @@ header {
     font-size: 1.5rem;
   }
 }
+
+.Skill {
+  img {
+    width: 4rem;
+  }
+}
