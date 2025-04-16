@@ -58,7 +58,22 @@ const Homepage = () => {
         </div>
       </section>
       <section id="Project" className="Project">
-        Project
+        <div className="Component">
+          <div className="project">project-1</div>
+          <p>introduce</p>
+        </div>
+        <div className="Component">
+          <div className="project">project-2</div>
+          <p>introduce</p>
+        </div>
+        <div className="Component">
+          <div className="project">project-3</div>
+          <p>introduce</p>
+        </div>
+        <div className="Component">
+          <div className="project">project-4</div>
+          <p>introduce</p>
+        </div>
       </section>
       <footer id="Footer">Footer</footer>
     </div>
