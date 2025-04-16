@@ -46,12 +46,16 @@ const Homepage = () => {
         </p>
       </section>
       <section id="Skill" className="Skill">
-        <img src="./public/react.svg" alt="React" />
-        <img src="./public/javascript.svg" alt="javascript" />
-        <img src="./public/sass.svg" alt="sass" />
-        <img src="./public/html5.svg" alt="html5" />
-        <img src="./public/git.svg" alt="git" />
-        <img src="./public/github.svg" alt="github" />
+        <h2>Front-End</h2>
+        <div className="images">
+          <img src="./public/react.svg" alt="React" title="React" />
+          <img src="./public/javascript.svg" alt="javascript" />
+          <img src="./public/sass.svg" alt="sass" />
+          <img src="./public/html5.svg" alt="html5" />
+          <img src="./public/css.svg" alt="css" />
+          <img src="./public/git.svg" alt="git" />
+          <img src="./public/github.svg" alt="github" />
+        </div>
       </section>
       <section id="Project" className="Project">
         Project
