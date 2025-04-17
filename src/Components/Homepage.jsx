@@ -59,20 +59,59 @@ const Homepage = () => {
       </section>
       <section id="Project" className="Project">
         <div className="Component">
-          <div className="project">project-1</div>
-          <p>introduce</p>
+          <div className="project">
+            <img src="./public/Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
+            <div className="useSkill">
+              <h1>Taiwan Weather</h1>
+              <p>React & SCSS</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>Taiwan Weather</h1>
+            <p>介紹......</p>
+          </div>
         </div>
         <div className="Component">
-          <div className="project">project-2</div>
-          <p>introduce</p>
+          <div className="project">
+            <img src="./public/Weather_App.png" alt="Weather App" />
+            <div className="useSkill">
+              <h1>Weather App</h1>
+              <p>React & SCSS</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>Weather App</h1>
+            <p>介紹......</p>
+          </div>
         </div>
         <div className="Component">
-          <div className="project">project-3</div>
-          <p>introduce</p>
+          <div className="project">
+            <img src="./public/Pexel_Picture_Intro.png" alt="Pexel Picture" />
+            <div className="useSkill">
+              <h1>Pexel Picture Search</h1>
+              <p>React & SCSS</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>Pexel Picture Search</h1>
+            <p>介紹......</p>
+          </div>
         </div>
         <div className="Component">
-          <div className="project">project-4</div>
-          <p>introduce</p>
+          <div className="project">
+            <img
+              src="Personal_Page_Intro.jpg"
+              alt="Personal Portfolio Website"
+            />
+            <div className="useSkill">
+              <h1>Personal Portfolio Website</h1>
+              <p>React & SCSS</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>Personal Portfolio Website</h1>
+            <p>介紹......</p>
+          </div>
         </div>
       </section>
       <footer id="Footer">Footer</footer>

@@ -111,15 +111,3 @@ header {
     }
   }
 }
-
-.Project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #3e3e4e;
-  padding: 0 20rem;
-  .Component {
-    border: 1px saddlebrown solid;
-    height: 20vh;
-  }
-}
