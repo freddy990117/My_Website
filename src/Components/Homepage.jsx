@@ -84,7 +84,7 @@ const Homepage = () => {
             <img src="./public/Weather_App.png" alt="Weather App" />
             <div className="useSkill">
               <h1>Weather App</h1>
-              <p>React & SCSS</p>
+              <p>JavaScript & SCSS</p>
             </div>
           </div>
           <div className="introduce">
@@ -147,7 +147,31 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <footer id="Footer">Footer</footer>
+      <footer id="Footer" className="context">
+        <h2>Create by Freedy &copy; in 2025</h2>
+        <div className="context-logo">
+          <a href="https://github.com/freddy990117?tab=repositories">
+            <img className="logo" src="./public/github.svg" alt="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/lee-jay-chang-24735a266/">
+            <img
+              className="logo"
+              src="./public/linkedin-logo.svg"
+              alt="linkedin"
+            />
+          </a>
+          <a href="mailto:freddy990117@gmail.com?subject=你好，我想合作&body=請在此留下你的訊息">
+            <img className="logo" src="./public/gmail.svg" alt="gmail" />
+          </a>
+          <a href="https://www.instagram.com/___leejay___/">
+            <img
+              className="logo"
+              src="./public/instagram.svg"
+              alt="instagram"
+            />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
