@@ -188,6 +188,9 @@ header {
     a {
       width: 5%;
       height: auto;
+      .logo-linkedin{
+        width: 100%;
+      }
     }
   }
 }

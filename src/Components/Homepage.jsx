@@ -155,8 +155,8 @@ const Homepage = () => {
           </a>
           <a href="https://www.linkedin.com/in/lee-jay-chang-24735a266/">
             <img
-              className="logo"
-              src="./public/linkedin-logo.svg"
+              className="logo-linkedin"
+              src="./public/Linkedin.svg"
               alt="linkedin"
             />
           </a>
