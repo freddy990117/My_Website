@@ -188,8 +188,77 @@ header {
     a {
       width: 5%;
       height: auto;
-      .logo-linkedin{
+      .logo-linkedin {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    /* 預計會加入 Hamburger Menu */
+  }
+  .Picture {
+    .introduce {
+      padding: 3rem;
+      align-items: center;
+      text-align: center;
+      p {
+        margin-top: 3rem;
+      }
+    }
+    .myPicture {
+      display: none;
+      opacity: 0;
+    }
+  }
+  .aboutMe {
+    padding: 3rem 5rem;
+    overflow-y: auto;
+  }
+  .Skill {
+    padding: 1rem;
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      img {
+        height: 10vh;
+      }
+    }
+  }
+  .Project {
+    .Component {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .introduce {
+        p {
+          height: 40vh;
+          overflow-y: auto;
+          margin: 2rem 0.5rem;
+        }
+      }
+    }
+  }
+  .context {
+    h2 {
+      text-align: center;
+    }
+    .context-logo {
+      align-items: center;
+      a {
+        img {
+          width: 300%;
+          height: 300%;
+        }
+        .logo-linkedin {
+          width: 300%;
+          height: 3.5vh;
+        }
       }
     }
   }
