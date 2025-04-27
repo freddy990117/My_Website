@@ -1,30 +1,83 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
+// 建立了 branch develop 來開發
 const Homepage = () => {
-  // 建立了 branch develop 來開發
+  // Hamburger 使用的 State
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 650); // 預先設定 Mobile 的寬度是 650 px
+  const [menuOpen, setMenuOpen] = useState(false); // 設定 Menu 是否開啟 （預設為開啟）
+
+  // 點選表單後，將狀態更改為 false
+  const handleOpen = () => {
+    setMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 650);
+    };
+    // 新增監聽事件，用於監聽「視窗大小」
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // 移除監聽事件，提升效能
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div id="Home" className="Home">
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="#Home">Home</a>
-            </li>
-            <li>
-              <a href="#aboutMe">About me</a>
-            </li>
-            <li>
-              <a href="#Skill">Skill</a>
-            </li>
-            <li>
-              <a href="#Project">Project</a>
-            </li>
-            <li>
-              <a href="#Footer">Context</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      {/* 手機大小 */}
+      {isMobile ? (
+        <div
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+          <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+            <a href="#Home" onClick={handleOpen}>
+              Home
+            </a>
+            <a href="#aboutMe" onClick={handleOpen}>
+              About Me
+            </a>
+            <a href="#Skill" onClick={handleOpen}>
+              Skill
+            </a>
+            <a href="#Project" onClick={handleOpen}>
+              Project
+            </a>
+            <a href="#Footer" onClick={handleOpen}>
+              Contact
+            </a>
+          </nav>
+        </div>
+      ) : (
+        // 一般大小
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <a href="#Home">Home</a>
+              </li>
+              <li>
+                <a href="#aboutMe">About me</a>
+              </li>
+              <li>
+                <a href="#Skill">Skill</a>
+              </li>
+              <li>
+                <a href="#Project">Project</a>
+              </li>
+              <li>
+                <a href="#Footer">Context</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      )}
+
       <section id="Picture" className="Picture">
         <section className="introduce">
           <h1>嗨,我是 Freddy</h1>

@@ -196,12 +196,87 @@ header {
 }
 
 @media screen and (max-width: 400px) {
-  header {
-    /* 預計會加入 Hamburger Menu */
+  .hamburger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1002;
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    div {
+      background-color: #e0e0e0;
+      height: 3px;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+  }
+  /* Hamburger 點開後的效果，第一個元素*/
+  .hamburger.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  /* 第二個元素消失  */
+  .hamburger.open div:nth-child(2) {
+    opacity: 0;
+  }
+  /* 第三個元素 */
+  .hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  .mobile-menu {
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    background-color: #2c2c3c;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: right 0.3s ease;
+    text-align: center;
+  }
+
+  .mobile-menu.show {
+    right: 0;
+  }
+
+  .mobile-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  .mobile-menu a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  /* 加上 show class 時，每個 link 一個一個出現 */
+  .mobile-menu.show a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-menu.show a:nth-child(1) {
+    transition-delay: 0.3s;
+  }
+  .mobile-menu.show a:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  .mobile-menu.show a:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+  .mobile-menu.show a:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+  .mobile-menu.show a:nth-child(5) {
+    transition-delay: 0.7s;
   }
   .Picture {
     .introduce {
-      padding: 3rem;
+      padding: 1rem 3rem;
       align-items: center;
       text-align: center;
       p {
