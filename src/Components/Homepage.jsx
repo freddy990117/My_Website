@@ -28,31 +28,37 @@ const Homepage = () => {
     <div id="Home" className="Home">
       {/* 手機大小 */}
       {isMobile ? (
-        <div
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-          <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-            <a href="#Home" onClick={handleOpen}>
-              Home
-            </a>
-            <a href="#aboutMe" onClick={handleOpen}>
-              About Me
-            </a>
-            <a href="#Skill" onClick={handleOpen}>
-              Skill
-            </a>
-            <a href="#Project" onClick={handleOpen}>
-              Project
-            </a>
-            <a href="#Footer" onClick={handleOpen}>
-              Contact
-            </a>
-          </nav>
-        </div>
+        <>
+          {menuOpen && (
+            <div className="overlay" onClick={() => setMenuOpen(false)} />
+          )}
+
+          <div
+            className={`hamburger ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+            <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+              <a href="#Home" onClick={handleOpen}>
+                Home
+              </a>
+              <a href="#aboutMe" onClick={handleOpen}>
+                About Me
+              </a>
+              <a href="#Skill" onClick={handleOpen}>
+                Skill
+              </a>
+              <a href="#Project" onClick={handleOpen}>
+                Project
+              </a>
+              <a href="#Footer" onClick={handleOpen}>
+                Contact
+              </a>
+            </nav>
+          </div>
+        </>
       ) : (
         // 一般大小
         <header>

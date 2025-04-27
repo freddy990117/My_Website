@@ -212,19 +212,20 @@ header {
       border-radius: 2px;
       transition: 0.4s;
     }
+    /* Hamburger 點開後的效果，第一個元素*/
+    &.open div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    /* 第二個元素消失  */
+    &.hamburger.open div:nth-child(2) {
+      opacity: 0;
+    }
+    /* 第三個元素 */
+    &.hamburger.open div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
   }
-  /* Hamburger 點開後的效果，第一個元素*/
-  .hamburger.open div:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  /* 第二個元素消失  */
-  .hamburger.open div:nth-child(2) {
-    opacity: 0;
-  }
-  /* 第三個元素 */
-  .hamburger.open div:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
+
   .mobile-menu {
     position: fixed;
     right: -100%;
@@ -236,105 +237,117 @@ header {
     gap: 1rem;
     transition: right 0.3s ease;
     text-align: center;
-  }
-
-  .mobile-menu.show {
-    right: 0;
-  }
-
-  .mobile-menu a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  .mobile-menu a {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  /* 加上 show class 時，每個 link 一個一個出現 */
-  .mobile-menu.show a {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .mobile-menu.show a:nth-child(1) {
-    transition-delay: 0.3s;
-  }
-  .mobile-menu.show a:nth-child(2) {
-    transition-delay: 0.4s;
-  }
-  .mobile-menu.show a:nth-child(3) {
-    transition-delay: 0.5s;
-  }
-  .mobile-menu.show a:nth-child(4) {
-    transition-delay: 0.6s;
-  }
-  .mobile-menu.show a:nth-child(5) {
-    transition-delay: 0.7s;
-  }
-  .Picture {
-    .introduce {
-      padding: 1rem 3rem;
-      align-items: center;
-      text-align: center;
-      p {
-        margin-top: 3rem;
-      }
-    }
-    .myPicture {
-      display: none;
+    a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 1.2rem;
       opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
-  }
-  .aboutMe {
-    padding: 3rem 5rem;
-    overflow-y: auto;
-  }
-  .Skill {
-    padding: 1rem;
-    .images {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      padding: 1rem;
-      img {
-        height: 10vh;
-      }
-    }
-  }
-  .Project {
-    .Component {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      .introduce {
-        p {
-          height: 40vh;
-          overflow-y: auto;
-          margin: 2rem 0.5rem;
-        }
-      }
-    }
-  }
-  .context {
-    h2 {
-      text-align: center;
-    }
-    .context-logo {
-      align-items: center;
+    &.show {
+      right: 0;
       a {
-        img {
-          width: 300%;
-          height: 300%;
-        }
-        .logo-linkedin {
-          width: 300%;
-          height: 3.5vh;
-        }
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* 讓每個 link 一個一個出現 */
+      :nth-child(1) {
+        transition-delay: 0.3s;
+      }
+      :nth-child(2) {
+        transition-delay: 0.4s;
+      }
+      :nth-child(3) {
+        transition-delay: 0.5s;
+      }
+      :nth-child(4) {
+        transition-delay: 0.6s;
+      }
+      :nth-child(5) {
+        transition-delay: 0.7s;
       }
     }
+  }
+}
+.Picture {
+  .introduce {
+    padding: 1rem 3rem;
+    align-items: center;
+    text-align: center;
+    p {
+      margin-top: 3rem;
+    }
+  }
+  .myPicture {
+    display: none;
+    opacity: 0;
+  }
+}
+.aboutMe {
+  padding: 3rem 5rem;
+  overflow-y: auto;
+}
+.Skill {
+  padding: 1rem;
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    img {
+      height: 10vh;
+    }
+  }
+}
+.Project {
+  .Component {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .introduce {
+      p {
+        height: 40vh;
+        overflow-y: auto;
+        margin: 2rem 0.5rem;
+      }
+    }
+  }
+}
+.context {
+  h2 {
+    text-align: center;
+  }
+  .context-logo {
+    align-items: center;
+    a {
+      img {
+        width: 300%;
+        height: 300%;
+      }
+      .logo-linkedin {
+        width: 300%;
+        height: 3.5vh;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* 一開始透明 */
+  z-index: 500;
+  animation: fadeIn 0.3s forwards;
+}
+
+/* 加上淡入動畫 keyframes */
+@keyframes fadeIn {
+  to {
+    background-color: rgba(30, 30, 47, 0.7);
   }
 }
