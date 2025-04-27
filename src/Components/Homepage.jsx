@@ -1,42 +1,210 @@
-import React from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 
+// 建立了 branch develop 來開發
 const Homepage = () => {
-  // 建立了 branch develop 來開發
+  // Hamburger 使用的 State
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 650); // 預先設定 Mobile 的寬度是 650 px
+  const [menuOpen, setMenuOpen] = useState(false); // 設定 Menu 是否開啟 （預設為開啟）
+
+  const scrollToSectionById = (id) => {
+    let element = document.getElementById(id);
+
+    // 特別處理 Project 的情況
+    if (id === "Project") {
+      element = document.getElementById("FirstProject");
+    }
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  // 點選表單後，將狀態更改為 false
+  const handleOpen = () => {
+    setMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 650);
+    };
+    // 新增監聽事件，用於監聽「視窗大小」
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // 移除監聽事件，提升效能
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show"); // 滾出畫面也可以收回
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <div id="Home" className="Home">
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="#Home">Home</a>
-            </li>
-            <li>
-              <a href="#aboutMe">About me</a>
-            </li>
-            <li>
-              <a href="#Skill">Skill</a>
-            </li>
-            <li>
-              <a href="#Project">Project</a>
-            </li>
-            <li>
-              <a href="#Footer">Context</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      {/* 手機大小 */}
+      {isMobile ? (
+        <>
+          {menuOpen && (
+            <div className="overlay" onClick={() => setMenuOpen(false)} />
+          )}
+
+          <div
+            className={`hamburger ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+            <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+              <a
+                href="#Picture"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("Picture");
+                }}
+              >
+                Home
+              </a>
+              <a
+                href="#aboutMe"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("aboutMe");
+                }}
+              >
+                About Me
+              </a>
+              <a
+                href="#Skill"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("Skill");
+                }}
+              >
+                Skill
+              </a>
+              <a
+                href="#Project"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("FirstProject");
+                }}
+              >
+                Project
+              </a>
+              <a
+                href="#Footer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("Footer");
+                }}
+              >
+                Contact
+              </a>
+            </nav>
+          </div>
+        </>
+      ) : (
+        // 一般大小
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="#Picture"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("Picture");
+                  }}
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#aboutMe"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("aboutMe");
+                  }}
+                >
+                  About me
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Skill"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("Skill");
+                  }}
+                >
+                  Skill
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Project"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("FirstProject");
+                  }}
+                >
+                  Project
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Footer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("Footer");
+                  }}
+                >
+                  Context
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      )}
+
       <section id="Picture" className="Picture">
         <section className="introduce">
-          <h1>嗨,我是 Freddy</h1>
-          <h2>我是一位擁有硬體維修背景、目前積極轉職為前端工程師的開發者。</h2>
-          <p>
+          <h1 className="fade-in-text">嗨,我是 Freddy</h1>
+          <h2 className="fade-in-text">
+            我是一位擁有硬體維修背景、目前積極轉職為前端工程師的開發者。
+          </h2>
+          <p className="fade-in-text">
             我擅長使用 React
-            打造互動式網站，重視畫面細節與程式架構，喜歡將技術轉化為實際解決方案。
+            打造互動式網站，重視畫面細節與程式架構，我喜歡將技術轉化為實際解決方案。
           </p>
         </section>
         <section className="myPicture"></section>
       </section>
-      <section id="aboutMe" className="aboutMe">
+      <section id="aboutMe" className="aboutMe hidden">
         <p>
           我是一位從硬體維修背景轉職的前端工程師，過去的工作經歷讓我對問題排解與邏輯思維特別擅長，也養成了面對挑戰不輕言放棄的個性。
           在轉職過程中，我學會了 React、JavaScript、SCSS
@@ -45,7 +213,7 @@ const Homepage = () => {
           我熱愛開發過程中「將想法具象化」的感覺，尤其是能寫出好看又好用的畫面。希望未來能加入一個重視技術成長的團隊，持續累積實力，為產品與使用者創造真正的價值。
         </p>
       </section>
-      <section id="Skill" className="Skill">
+      <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
           <img src="./public/react.svg" alt="React" title="React" />
@@ -58,11 +226,18 @@ const Homepage = () => {
         </div>
       </section>
       <section id="Project" className="Project">
-        <div className="Component">
+        <div className="Component hidden" id="FirstProject">
           <div className="project">
             <img src="./public/Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
             <div className="useSkill">
-              <h1>Taiwan Weather</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Taiwan-Weather"
+                  target="_blank"
+                >
+                  Taiwan Weather
+                </a>
+              </h1>
               <p>React & SCSS</p>
             </div>
           </div>
@@ -79,11 +254,18 @@ const Homepage = () => {
             </p>
           </div>
         </div>
-        <div className="Component">
+        <div className="Component hidden">
           <div className="project">
             <img src="./public/Weather_App.png" alt="Weather App" />
             <div className="useSkill">
-              <h1>Weather App</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Weather-APP"
+                  target="_blank"
+                >
+                  Weather App
+                </a>
+              </h1>
               <p>JavaScript & SCSS</p>
             </div>
           </div>
@@ -102,11 +284,18 @@ const Homepage = () => {
             </p>
           </div>
         </div>
-        <div className="Component">
+        <div className="Component hidden">
           <div className="project">
             <img src="./public/Pexel_Picture_Intro.png" alt="Pexel Picture" />
             <div className="useSkill">
-              <h1>Pexel Picture Search</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Pexel-Picture-Project"
+                  target="_blank"
+                >
+                  Pexel Picture Search
+                </a>
+              </h1>
               <p>JavaScript & SCSS</p>
             </div>
           </div>
@@ -124,14 +313,21 @@ const Homepage = () => {
             </p>
           </div>
         </div>
-        <div className="Component">
+        <div className="Component hidden">
           <div className="project">
             <img
               src="Personal_Page_Intro.jpg"
               alt="Personal Portfolio Website"
             />
             <div className="useSkill">
-              <h1>Personal Portfolio Website</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Personal-Portfolio-Website"
+                  target="_blank"
+                >
+                  Personal Portfolio Website
+                </a>
+              </h1>
               <p>React & SCSS</p>
             </div>
           </div>
@@ -143,6 +339,8 @@ const Homepage = () => {
               <br />
               在開發上，我採用 React 與 SCSS 打造整體版面與互動效果，並透過 RWD
               響應式設計讓網站能在電腦與手機上都能流暢瀏覽。
+              <br />
+              (但因為成果不滿意，所以做了一個新的自我介紹網頁)
             </p>
           </div>
         </div>
@@ -150,10 +348,16 @@ const Homepage = () => {
       <footer id="Footer" className="context">
         <h2>Create by Freedy &copy; in 2025</h2>
         <div className="context-logo">
-          <a href="https://github.com/freddy990117?tab=repositories">
+          <a
+            href="https://github.com/freddy990117?tab=repositories"
+            target="_blank"
+          >
             <img className="logo" src="./public/github.svg" alt="github" />
           </a>
-          <a href="https://www.linkedin.com/in/lee-jay-chang-24735a266/">
+          <a
+            href="https://www.linkedin.com/in/lee-jay-chang-24735a266/"
+            target="_blank"
+          >
             <img
               className="logo-linkedin"
               src="./public/Linkedin.svg"
@@ -163,7 +367,7 @@ const Homepage = () => {
           <a href="mailto:freddy990117@gmail.com?subject=你好，我想合作&body=請在此留下你的訊息">
             <img className="logo" src="./public/gmail.svg" alt="gmail" />
           </a>
-          <a href="https://www.instagram.com/___leejay___/">
+          <a href="https://www.instagram.com/___leejay___/" target="_blank">
             <img
               className="logo"
               src="./public/instagram.svg"
