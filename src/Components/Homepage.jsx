@@ -1,10 +1,23 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 
 // 建立了 branch develop 來開發
 const Homepage = () => {
   // Hamburger 使用的 State
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 650); // 預先設定 Mobile 的寬度是 650 px
   const [menuOpen, setMenuOpen] = useState(false); // 設定 Menu 是否開啟 （預設為開啟）
+
+  const scrollToSectionById = (id) => {
+    let element = document.getElementById(id);
+
+    // 特別處理 Project 的情況
+    if (id === "Project") {
+      element = document.getElementById("FirstProject");
+    }
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
 
   // 點選表單後，將狀態更改為 false
   const handleOpen = () => {
@@ -60,19 +73,54 @@ const Homepage = () => {
             <div></div>
             <div></div>
             <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-              <a href="#Home" onClick={handleOpen}>
+              <a
+                href="#Picture"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("Picture");
+                }}
+              >
                 Home
               </a>
-              <a href="#aboutMe" onClick={handleOpen}>
+              <a
+                href="#aboutMe"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("aboutMe");
+                }}
+              >
                 About Me
               </a>
-              <a href="#Skill" onClick={handleOpen}>
+              <a
+                href="#Skill"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("Skill");
+                }}
+              >
                 Skill
               </a>
-              <a href="#Project" onClick={handleOpen}>
+              <a
+                href="#Project"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("FirstProject");
+                }}
+              >
                 Project
               </a>
-              <a href="#Footer" onClick={handleOpen}>
+              <a
+                href="#Footer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleOpen();
+                  scrollToSectionById("Footer");
+                }}
+              >
                 Contact
               </a>
             </nav>
@@ -84,19 +132,59 @@ const Homepage = () => {
           <nav>
             <ul>
               <li>
-                <a href="#Home">Home</a>
+                <a
+                  href="#Picture"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("Picture");
+                  }}
+                >
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#aboutMe">About me</a>
+                <a
+                  href="#aboutMe"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("aboutMe");
+                  }}
+                >
+                  About me
+                </a>
               </li>
               <li>
-                <a href="#Skill">Skill</a>
+                <a
+                  href="#Skill"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("Skill");
+                  }}
+                >
+                  Skill
+                </a>
               </li>
               <li>
-                <a href="#Project">Project</a>
+                <a
+                  href="#Project"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("FirstProject");
+                  }}
+                >
+                  Project
+                </a>
               </li>
               <li>
-                <a href="#Footer">Context</a>
+                <a
+                  href="#Footer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSectionById("Footer");
+                  }}
+                >
+                  Context
+                </a>
               </li>
             </ul>
           </nav>
@@ -138,7 +226,7 @@ const Homepage = () => {
         </div>
       </section>
       <section id="Project" className="Project">
-        <div className="Component hidden">
+        <div className="Component hidden" id="FirstProject">
           <div className="project">
             <img src="./public/Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
             <div className="useSkill">
@@ -251,6 +339,7 @@ const Homepage = () => {
               <br />
               在開發上，我採用 React 與 SCSS 打造整體版面與互動效果，並透過 RWD
               響應式設計讓網站能在電腦與手機上都能流暢瀏覽。
+              <br />
               (但因為成果不滿意，所以做了一個新的自我介紹網頁)
             </p>
           </div>
