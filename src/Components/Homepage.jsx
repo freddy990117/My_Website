@@ -121,7 +121,14 @@ const Homepage = () => {
           <div className="project">
             <img src="./public/Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
             <div className="useSkill">
-              <h1>Taiwan Weather</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Taiwan-Weather"
+                  target="_blank"
+                >
+                  Taiwan Weather
+                </a>
+              </h1>
               <p>React & SCSS</p>
             </div>
           </div>
@@ -142,7 +149,14 @@ const Homepage = () => {
           <div className="project">
             <img src="./public/Weather_App.png" alt="Weather App" />
             <div className="useSkill">
-              <h1>Weather App</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Weather-APP"
+                  target="_blank"
+                >
+                  Weather App
+                </a>
+              </h1>
               <p>JavaScript & SCSS</p>
             </div>
           </div>
@@ -165,7 +179,14 @@ const Homepage = () => {
           <div className="project">
             <img src="./public/Pexel_Picture_Intro.png" alt="Pexel Picture" />
             <div className="useSkill">
-              <h1>Pexel Picture Search</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Pexel-Picture-Project"
+                  target="_blank"
+                >
+                  Pexel Picture Search
+                </a>
+              </h1>
               <p>JavaScript & SCSS</p>
             </div>
           </div>
@@ -190,7 +211,14 @@ const Homepage = () => {
               alt="Personal Portfolio Website"
             />
             <div className="useSkill">
-              <h1>Personal Portfolio Website</h1>
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Personal-Portfolio-Website"
+                  target="_blank"
+                >
+                  Personal Portfolio Website
+                </a>
+              </h1>
               <p>React & SCSS</p>
             </div>
           </div>
@@ -202,6 +230,7 @@ const Homepage = () => {
               <br />
               在開發上，我採用 React 與 SCSS 打造整體版面與互動效果，並透過 RWD
               響應式設計讓網站能在電腦與手機上都能流暢瀏覽。
+              (但因為成果不滿意，所以做了一個新的自我介紹網頁)
             </p>
           </div>
         </div>
@@ -209,10 +238,16 @@ const Homepage = () => {
       <footer id="Footer" className="context">
         <h2>Create by Freedy &copy; in 2025</h2>
         <div className="context-logo">
-          <a href="https://github.com/freddy990117?tab=repositories">
+          <a
+            href="https://github.com/freddy990117?tab=repositories"
+            target="_blank"
+          >
             <img className="logo" src="./public/github.svg" alt="github" />
           </a>
-          <a href="https://www.linkedin.com/in/lee-jay-chang-24735a266/">
+          <a
+            href="https://www.linkedin.com/in/lee-jay-chang-24735a266/"
+            target="_blank"
+          >
             <img
               className="logo-linkedin"
               src="./public/Linkedin.svg"
@@ -222,7 +257,7 @@ const Homepage = () => {
           <a href="mailto:freddy990117@gmail.com?subject=你好，我想合作&body=請在此留下你的訊息">
             <img className="logo" src="./public/gmail.svg" alt="gmail" />
           </a>
-          <a href="https://www.instagram.com/___leejay___/">
+          <a href="https://www.instagram.com/___leejay___/" target="_blank">
             <img
               className="logo"
               src="./public/instagram.svg"

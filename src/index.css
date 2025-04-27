@@ -7,6 +7,10 @@
 body {
   background-color: #1e1e2f;
   color: #e0e0e0;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 header {
   background-color: #2c2c3c;
@@ -329,6 +333,37 @@ header {
         .logo-linkedin {
           width: 300%;
           height: 3.5vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .Picture {
+    height: auto;
+    .introduce {
+      padding: 3rem;
+      text-align: left;
+    }
+    .myPicture {
+      display: none;
+    }
+  }
+  .aboutMe {
+    padding: 3rem;
+  }
+  .Project {
+    .Component {
+      display: flex;
+      flex-direction: column;
+      .introduce {
+        h1 {
+          display: none;
+        }
+        p {
+          margin: 2rem 0;
+          font-size: 1.3rem;
         }
       }
     }
