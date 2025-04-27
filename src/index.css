@@ -20,6 +20,7 @@ header {
   align-items: center;
   height: 5rem;
   width: 100%;
+  z-index: 999;
   nav {
     ul {
       list-style: none;
@@ -49,7 +50,7 @@ header {
 }
 
 .Picture {
-  height: 95vh;
+  height: 90vh;
   padding-top: 5rem;
   display: flex;
   .introduce {
@@ -385,5 +386,42 @@ header {
 @keyframes fadeIn {
   to {
     background-color: rgba(30, 30, 47, 0.7);
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s; /* 延遲半秒後開始 */
+  &:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(2) {
+    animation-delay: 1s;
+  }
+  &:nth-child(3) {
+    animation-delay: 1s;
+  }
+}
+
+/* 定義動畫 keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

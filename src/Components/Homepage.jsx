@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 
 // 建立了 branch develop 來開發
 const Homepage = () => {
@@ -21,6 +21,25 @@ const Homepage = () => {
     return () => {
       // 移除監聽事件，提升效能
       window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show"); // 滾出畫面也可以收回
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 
@@ -86,16 +105,18 @@ const Homepage = () => {
 
       <section id="Picture" className="Picture">
         <section className="introduce">
-          <h1>嗨,我是 Freddy</h1>
-          <h2>我是一位擁有硬體維修背景、目前積極轉職為前端工程師的開發者。</h2>
-          <p>
+          <h1 className="fade-in-text">嗨,我是 Freddy</h1>
+          <h2 className="fade-in-text">
+            我是一位擁有硬體維修背景、目前積極轉職為前端工程師的開發者。
+          </h2>
+          <p className="fade-in-text">
             我擅長使用 React
             打造互動式網站，重視畫面細節與程式架構，我喜歡將技術轉化為實際解決方案。
           </p>
         </section>
         <section className="myPicture"></section>
       </section>
-      <section id="aboutMe" className="aboutMe">
+      <section id="aboutMe" className="aboutMe hidden">
         <p>
           我是一位從硬體維修背景轉職的前端工程師，過去的工作經歷讓我對問題排解與邏輯思維特別擅長，也養成了面對挑戰不輕言放棄的個性。
           在轉職過程中，我學會了 React、JavaScript、SCSS
@@ -104,7 +125,7 @@ const Homepage = () => {
           我熱愛開發過程中「將想法具象化」的感覺，尤其是能寫出好看又好用的畫面。希望未來能加入一個重視技術成長的團隊，持續累積實力，為產品與使用者創造真正的價值。
         </p>
       </section>
-      <section id="Skill" className="Skill">
+      <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
           <img src="./public/react.svg" alt="React" title="React" />
@@ -117,7 +138,7 @@ const Homepage = () => {
         </div>
       </section>
       <section id="Project" className="Project">
-        <div className="Component">
+        <div className="Component hidden">
           <div className="project">
             <img src="./public/Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
             <div className="useSkill">
@@ -145,7 +166,7 @@ const Homepage = () => {
             </p>
           </div>
         </div>
-        <div className="Component">
+        <div className="Component hidden">
           <div className="project">
             <img src="./public/Weather_App.png" alt="Weather App" />
             <div className="useSkill">
@@ -175,7 +196,7 @@ const Homepage = () => {
             </p>
           </div>
         </div>
-        <div className="Component">
+        <div className="Component hidden">
           <div className="project">
             <img src="./public/Pexel_Picture_Intro.png" alt="Pexel Picture" />
             <div className="useSkill">
@@ -204,7 +225,7 @@ const Homepage = () => {
             </p>
           </div>
         </div>
-        <div className="Component">
+        <div className="Component hidden">
           <div className="project">
             <img
               src="Personal_Page_Intro.jpg"
