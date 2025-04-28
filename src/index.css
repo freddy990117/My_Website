@@ -2,11 +2,23 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
 }
 
 body {
   background-color: #1e1e2f;
   color: #e0e0e0;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
 }
 header {
   background-color: #2c2c3c;
@@ -16,6 +28,7 @@ header {
   align-items: center;
   height: 5rem;
   width: 100%;
+  z-index: 999;
   nav {
     ul {
       list-style: none;
@@ -24,6 +37,413 @@ header {
       align-items: center;
       gap: 1rem;
       li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: none;
+        transition: all 0.5s ease;
+        button {
+          background-color: #1e1e2f;
+          color: white;
+          width: 100%;
+          height: 100%;
+          padding: 1rem 2.5rem; /* 自行設定 button 的高度與寬度 */
+
+          border: none;
+          font-size: 1rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.3s ease;
+          border-radius: 10px;
+          white-space: nowrap;
+          &:hover {
+            background-color: #4f83cc;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Picture {
+  height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  .introduce {
+    padding: 13rem;
+    flex: 5;
+    h1 {
+      font-size: 5rem;
+      color: #e0e0e0;
+    }
+    h2 {
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .myPicture {
+    margin-right: 8rem;
+    flex: 4;
+    background-image: url(../public/image.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+}
+
+.aboutMe {
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  padding: 8rem;
+  line-height: 3rem;
+  background-color: rgba(44, 44, 60, 0.8);
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.Skill {
+  padding: 5rem;
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .images {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 20vh;
+    padding: 2.5rem;
+    img {
+      padding: 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: #4f83cc;
+        border: 1px solid #3e3e4e;
+      }
+    }
+  }
+}
+
+.Component {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 兩欄平均寬 */
+  gap: 2rem;
+  padding: 2rem;
+  align-items: start;
+  .project {
+    display: flex;
+    flex-direction: column;
+    background-color: #2c2c3c;
+    border-radius: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+    }
+  }
+  .useSkill {
+    background-color: #1e1e2f;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    h1 {
+      margin: 1rem;
+      font-size: 1.5rem;
+    }
+    p {
+      text-align: center;
+      border-radius: 15px;
+      background-color: #4f83cc;
+      border: 1px solid blue;
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+  }
+  .introduce {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin: 3rem 8rem 0 0;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  }
+  .useSkill .introduce {
+    background-color: #2c2c3c;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: #e0e0e0;
+  }
+}
+
+.context {
+  background-color: #2c2c3c;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 10vh;
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .context-logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+      width: 5%;
+      height: auto;
+      .logo-linkedin {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hamburger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1002;
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    div {
+      background-color: #e0e0e0;
+      height: 3px;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+    /* Hamburger 點開後的效果，第一個元素*/
+    &.open div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    /* 第二個元素消失  */
+    &.hamburger.open div:nth-child(2) {
+      opacity: 0;
+    }
+    /* 第三個元素 */
+    &.hamburger.open div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    background-color: #2c2c3c;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: right 0.3s ease;
+    text-align: center;
+    a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 1.2rem;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    &.show {
+      right: 0;
+      a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* 讓每個 link 一個一個出現 */
+      :nth-child(1) {
+        transition-delay: 0.3s;
+      }
+      :nth-child(2) {
+        transition-delay: 0.4s;
+      }
+      :nth-child(3) {
+        transition-delay: 0.5s;
+      }
+      :nth-child(4) {
+        transition-delay: 0.6s;
+      }
+      :nth-child(5) {
+        transition-delay: 0.7s;
+      }
+    }
+  }
+
+  .Picture {
+    .introduce {
+      padding: 1rem 3rem;
+      align-items: center;
+      text-align: center;
+      p {
+        margin-top: 3rem;
+      }
+    }
+    .myPicture {
+      display: none;
+      opacity: 0;
+    }
+  }
+  .aboutMe {
+    padding: 3rem 5rem;
+    overflow-y: auto;
+  }
+  .Skill {
+    padding: 1rem;
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      img {
+        height: 10vh;
+      }
+    }
+  }
+  .Project {
+    .Component {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .introduce {
+        p {
+          height: 40vh;
+          overflow-y: auto;
+          margin: 2rem 0.5rem;
+        }
+      }
+    }
+  }
+  .context {
+    h2 {
+      text-align: center;
+    }
+    .context-logo {
+      align-items: center;
+      a {
+        img {
+          width: 300%;
+          height: 300%;
+        }
+        .logo-linkedin {
+          width: 300%;
+          height: 3.5vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .Picture {
+    height: auto;
+    .introduce {
+      padding: 3rem;
+      text-align: left;
+    }
+    .myPicture {
+      display: none;
+    }
+  }
+  .aboutMe {
+    padding: 3rem;
+  }
+  .Project {
+    .Component {
+      display: flex;
+      flex-direction: column;
+      .introduce {
+        h1 {
+          display: none;
+        }
+        p {
+          margin: 2rem 0;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* 一開始透明 */
+  z-index: 500;
+  animation: fadeIn 0.3s forwards;
+}
+
+/* 加上淡入動畫 keyframes */
+@keyframes fadeIn {
+  to {
+    background-color: rgba(30, 30, 47, 0.7);
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s; /* 延遲半秒後開始 */
+  &:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(2) {
+    animation-delay: 1s;
+  }
+  &:nth-child(3) {
+    animation-delay: 1s;
+  }
+}
+
+/* 定義動畫 keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
         background-color: #2c2c3c;
         border: 0.1px solid #3e3e4e;
         border-radius: 1rem;
