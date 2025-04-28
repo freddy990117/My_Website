@@ -132,59 +132,54 @@ const Homepage = () => {
           <nav>
             <ul>
               <li>
-                <a
-                  href="#Picture"
+                <button
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSectionById("Picture");
                   }}
                 >
                   Home
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#aboutMe"
+                <button
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSectionById("aboutMe");
                   }}
                 >
                   About me
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#Skill"
+                <button
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSectionById("Skill");
                   }}
                 >
                   Skill
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#Project"
+                <button
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSectionById("FirstProject");
                   }}
                 >
                   Project
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#Footer"
+                <button
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSectionById("Footer");
                   }}
                 >
                   Context
-                </a>
+                </button>
               </li>
             </ul>
           </nav>
