@@ -211,19 +211,19 @@ const Homepage = () => {
       <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
-          <img src="./public/react.svg" alt="React" title="React" />
-          <img src="./public/javascript.svg" alt="javascript" />
-          <img src="./public/sass.svg" alt="sass" />
-          <img src="./public/html5.svg" alt="html5" />
-          <img src="./public/css.svg" alt="css" />
-          <img src="./public/git.svg" alt="git" />
-          <img src="./public/github.svg" alt="github" />
+          <img src="./react.svg" alt="React" title="React" />
+          <img src="./javascript.svg" alt="javascript" />
+          <img src="./sass.svg" alt="sass" />
+          <img src="./html5.svg" alt="html5" />
+          <img src="./css.svg" alt="css" />
+          <img src="./git.svg" alt="git" />
+          <img src="./github.svg" alt="github" />
         </div>
       </section>
       <section id="Project" className="Project">
         <div className="Component hidden" id="FirstProject">
           <div className="project">
-            <img src="./public/Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
+            <img src="./Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
             <div className="useSkill">
               <h1>
                 <a
@@ -251,7 +251,7 @@ const Homepage = () => {
         </div>
         <div className="Component hidden">
           <div className="project">
-            <img src="./public/Weather_App.png" alt="Weather App" />
+            <img src="./Weather_App.png" alt="Weather App" />
             <div className="useSkill">
               <h1>
                 <a
@@ -281,7 +281,7 @@ const Homepage = () => {
         </div>
         <div className="Component hidden">
           <div className="project">
-            <img src="./public/Pexel_Picture_Intro.png" alt="Pexel Picture" />
+            <img src="./Pexel_Picture_Intro.png" alt="Pexel Picture" />
             <div className="useSkill">
               <h1>
                 <a
@@ -347,27 +347,19 @@ const Homepage = () => {
             href="https://github.com/freddy990117?tab=repositories"
             target="_blank"
           >
-            <img className="logo" src="./public/github.svg" alt="github" />
+            <img className="logo" src="github.svg" alt="github" />
           </a>
           <a
             href="https://www.linkedin.com/in/lee-jay-chang-24735a266/"
             target="_blank"
           >
-            <img
-              className="logo-linkedin"
-              src="./public/Linkedin.svg"
-              alt="linkedin"
-            />
+            <img className="logo-linkedin" src="Linkedin.svg" alt="linkedin" />
           </a>
           <a href="mailto:freddy990117@gmail.com?subject=你好，我想合作&body=請在此留下你的訊息">
-            <img className="logo" src="./public/gmail.svg" alt="gmail" />
+            <img className="logo" src="gmail.svg" alt="gmail" />
           </a>
           <a href="https://www.instagram.com/___leejay___/" target="_blank">
-            <img
-              className="logo"
-              src="./public/instagram.svg"
-              alt="instagram"
-            />
+            <img className="logo" src="instagram.svg" alt="instagram" />
           </a>
         </div>
       </footer>
