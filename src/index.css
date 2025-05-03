@@ -216,7 +216,7 @@ header {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
   .hamburger {
     width: 30px;
     height: 30px;
@@ -224,7 +224,7 @@ header {
     cursor: pointer;
     z-index: 1002;
     position: fixed;
-    top: 5px;
+    top: 10px;
     left: 10px;
     div {
       background-color: #e0e0e0;
@@ -327,6 +327,11 @@ header {
       display: flex;
       flex-direction: column;
       text-align: center;
+      .useSkill {
+        p {
+          align-self: center;
+        }
+      }
       .introduce {
         p {
           height: 40vh;
