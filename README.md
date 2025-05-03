@@ -1,12 +1,48 @@
-# React + Vite
+# 🧑‍💻 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是我使用 **React** 和 **Vite** 建立的個人自我介紹網站，展示了我的背景、技能與作品。網站支援響應式設計（RWD），可在手機與桌機上流暢瀏覽。作為我轉職為前端工程師的重要里程碑，這個網站也記錄著我的學習成果與實戰經驗。
 
-Currently, two official plugins are available:
+## 📸 Project First Look
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+video......
 
-## Expanding the ESLint configuration
+## 🛠️ Skill
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-  React + Vite
+-  SCSS 
+-  RWD
+-  React Hooks：`useState`, `useEffect`,`useLayoutEffect`
+
+
+---
+## 📚 Website content
+
+- **Homepage**：自我簡介與社群連結。
+- **About-me**：過往背景、學習歷程與轉職動機。
+- **Skill**：展示我熟悉的前端技術與工具。
+- **Project**：包含 Weather App、圖片搜尋等實作專案。
+- **Context**：提供 E-mail 及社群平台連結，歡迎聯絡。
+
+---
+## How to Start 
+
+請依照以下步驟下載並執行專案。
+
+### 1. Clone Project
+
+```bash
+git clone https://github.com/freddy990117/My_Website.git
+cd My_Website
+npm install
+npm run dev
+```
+---
+## About me 
+嗨，我是張立杰！
+目前正積極轉職為前端工程師，期望透過實作作品與學習，進入前端開發領域。
+📫 歡迎透過 LinkedIn 或 Email 聯絡我！
+
+--
+📄 授權 License
+
+本專案以 MIT License 授權，歡迎參考與修改。
