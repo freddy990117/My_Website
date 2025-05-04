@@ -4,7 +4,7 @@
 
 ## 📸 Project First Look
 
-video......
+![Demo](https://i.imgur.com/czFDU1A.gif)
 
 ## 🛠️ Skill
 
