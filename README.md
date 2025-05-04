@@ -4,7 +4,7 @@
 
 ## 📸 Project First Look
 
-![Demo](https://i.imgur.com/czFDU1A.gif)
+![Demo](https://i.imgur.com/AP7vVZm.gif)
 
 ## 🛠️ Skill
 
@@ -43,6 +43,6 @@ npm run dev
 📫 歡迎透過 LinkedIn 或 Email 聯絡我！
 
 --
-📄 授權 License
+## License
 
 本專案以 MIT License 授權，歡迎參考與修改。
