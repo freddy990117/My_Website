@@ -185,7 +185,6 @@ const Homepage = () => {
           </nav>
         </header>
       )}
-
       <section id="Picture" className="Picture">
         <section className="introduce">
           <h1 className="fade-in-text">嗨,我是 Freddy</h1>
@@ -211,6 +210,10 @@ const Homepage = () => {
       <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
+          <img src="./typescript.svg" alt="typescript" title="typescript" />
+          {/* 要更改圖片 */}
+          <img src="./bootstrap.svg" alt="bootstrap" title="bootstrap" />
+          {/* 要更改圖片 */}
           <img src="./react.svg" alt="React" title="React" />
           <img src="./javascript.svg" alt="javascript" />
           <img src="./sass.svg" alt="sass" />
@@ -221,9 +224,104 @@ const Homepage = () => {
         </div>
       </section>
       <section id="Project" className="Project">
+        {/* Input & Display */}
         <div className="Component hidden" id="FirstProject">
           <div className="project">
-            <img src="./Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
+            <img src="./public/assets/Result-2.png" alt="Input & display" />
+            <div className="useSkill">
+              <h1>
+                <a href="" target="_blank">
+                  Input & Display (新增一個點選我進入 github or 上線的網站)
+                </a>
+              </h1>
+              <p>TypeScript & Bootstrap</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>Input & Display</h1>
+            <p>待變更.....</p>
+            <p>
+              這是我設計並開發的個人作品網站，用來介紹自己的背景、技能與開發專案，目的是讓訪客快速了解我的專業能力與開發風格。網站內容包含首頁動畫、自我介紹、技能圖示區塊、專案介紹以及聯絡表單。
+              <br />
+              <br />
+              在開發上，我採用 React 與 SCSS 打造整體版面與互動效果，並透過 RWD
+              響應式設計讓網站能在電腦與手機上都能流暢瀏覽。
+              <br />
+            </p>
+          </div>
+        </div>
+        {/* Todo-List */}
+        <div className="Component hidden">
+          <div className="project">
+            <img src="./public/assets/TodoList-Demo.gif" alt="Todo-List" />
+            <div className="useSkill">
+              <h1>
+                <a href="" target="_blank">
+                  Todo-List (新增一個點選我進入 github or 上線的網站)
+                </a>
+              </h1>
+              <p>React & SCSS & Jest</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>
+              <a href="" target="_blank">
+                Todo-List
+              </a>
+            </h1>
+            <p>待變更....</p>
+            <p>
+              這是一個針對台灣地區設計的天氣查詢網站，使用政府開放資料 API
+              顯示各縣市的天氣預報、氣溫、降雨機率與紫外線指數等資訊。使用者可以選擇不同地區，查看接下來幾天的天氣變化，還能透過圖表清楚掌握趨勢。
+              <br />
+              <br />
+              專案主要使用 React 搭配 Chart.js 製作天氣折線圖與紫外線柱狀圖。
+              此專案的 API
+              回傳資料結構複雜，因此特別花時間撰寫資料清洗與格式轉換邏輯，讓資料能正確地對應到各區域與時間。
+            </p>
+          </div>
+        </div>
+        {/* Fitness Dashboard */}
+        <div className="Component hidden">
+          <div className="project">
+            <img
+              src="./public/assets/Dashboard-Demo.gif"
+              alt="Fitness Dashboard"
+            />
+            <div className="useSkill">
+              <h1>
+                <a href="" target="_blank">
+                  Fitness Dashboard (新增一個點選我進入 github or 上線的網站)
+                </a>
+              </h1>
+              <p>React & SCSS & Firestore</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>
+              <a href="" target="_blank">
+                Fitness Dashboard
+              </a>
+            </h1>
+            <p>待變更....</p>
+            <p>
+              這是一個針對台灣地區設計的天氣查詢網站，使用政府開放資料 API
+              顯示各縣市的天氣預報、氣溫、降雨機率與紫外線指數等資訊。使用者可以選擇不同地區，查看接下來幾天的天氣變化，還能透過圖表清楚掌握趨勢。
+              <br />
+              <br />
+              專案主要使用 React 搭配 Chart.js 製作天氣折線圖與紫外線柱狀圖。
+              此專案的 API
+              回傳資料結構複雜，因此特別花時間撰寫資料清洗與格式轉換邏輯，讓資料能正確地對應到各區域與時間。
+            </p>
+          </div>
+        </div>
+        {/* Taiwan Weather */}
+        <div className="Component hidden">
+          <div className="project">
+            <img
+              src="./public/assets/TaiwanWeather-Demo.gif"
+              alt="Taiwan Weather"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -237,7 +335,14 @@ const Homepage = () => {
             </div>
           </div>
           <div className="introduce">
-            <h1>Taiwan Weather</h1>
+            <h1>
+              <a
+                href="https://github.com/freddy990117/Taiwan-Weather"
+                target="_blank"
+              >
+                Taiwan Weather
+              </a>
+            </h1>
             <p>
               這是一個針對台灣地區設計的天氣查詢網站，使用政府開放資料 API
               顯示各縣市的天氣預報、氣溫、降雨機率與紫外線指數等資訊。使用者可以選擇不同地區，查看接下來幾天的天氣變化，還能透過圖表清楚掌握趨勢。
@@ -249,9 +354,10 @@ const Homepage = () => {
             </p>
           </div>
         </div>
+        {/* Weather App */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Weather_App.png" alt="Weather App" />
+            <img src="./public/assets/WeatherApp-Demo.gif" alt="Weather App" />
             <div className="useSkill">
               <h1>
                 <a
@@ -279,6 +385,7 @@ const Homepage = () => {
             </p>
           </div>
         </div>
+        {/* Pexel Picture Search */}
         <div className="Component hidden">
           <div className="project">
             <img src="./Pexel_Picture_Intro.png" alt="Pexel Picture" />
@@ -305,37 +412,6 @@ const Homepage = () => {
               請求，並透過 React Router
               進行頁面路由切換。整體設計強調簡潔、直覺的搜尋體驗，並處理了圖片載入時的
               loading 狀態，讓使用者在等待資料時也能有良好的操作感受。
-            </p>
-          </div>
-        </div>
-        <div className="Component hidden">
-          <div className="project">
-            <img
-              src="Personal_Page_Intro.jpg"
-              alt="Personal Portfolio Website"
-            />
-            <div className="useSkill">
-              <h1>
-                <a
-                  href="https://github.com/freddy990117/Personal-Portfolio-Website"
-                  target="_blank"
-                >
-                  Personal Portfolio Website
-                </a>
-              </h1>
-              <p>React & SCSS</p>
-            </div>
-          </div>
-          <div className="introduce">
-            <h1>Personal Portfolio Website</h1>
-            <p>
-              這是我設計並開發的個人作品網站，用來介紹自己的背景、技能與開發專案，目的是讓訪客快速了解我的專業能力與開發風格。網站內容包含首頁動畫、自我介紹、技能圖示區塊、專案介紹以及聯絡表單。
-              <br />
-              <br />
-              在開發上，我採用 React 與 SCSS 打造整體版面與互動效果，並透過 RWD
-              響應式設計讓網站能在電腦與手機上都能流暢瀏覽。
-              <br />
-              (但因為成果不滿意，所以做了一個新的自我介紹網頁)
             </p>
           </div>
         </div>
