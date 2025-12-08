@@ -210,13 +210,11 @@ const Homepage = () => {
       <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
-          <img src="./typescript.svg" alt="typescript" title="typescript" />
-          {/* 要更改圖片 */}
-          <img src="./bootstrap.svg" alt="bootstrap" title="bootstrap" />
-          {/* 要更改圖片 */}
           <img src="./react.svg" alt="React" title="React" />
+          <img src="./typescript.svg" alt="typescript" title="typescript" />
           <img src="./javascript.svg" alt="javascript" />
           <img src="./sass.svg" alt="sass" />
+          <img src="./bootstrap.svg" alt="bootstrap" title="bootstrap" />
           <img src="./html5.svg" alt="html5" />
           <img src="./css.svg" alt="css" />
           <img src="./git.svg" alt="git" />
