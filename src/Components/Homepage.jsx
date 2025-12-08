@@ -234,9 +234,13 @@ const Homepage = () => {
             <img src="./public/assets/Result-2.png" alt="Input & display" />
             <div className="useSkill">
               <h1>
-                <a href="" target="_blank">
-                  Input & Display (新增一個點選我進入 github or 上線的網站)
+                <a
+                  href="https://github.com/freddy990117/Input-Display"
+                  target="_blank"
+                >
+                  Input & Display
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>TypeScript & Bootstrap</p>
             </div>
@@ -264,16 +268,23 @@ const Homepage = () => {
             <img src="./public/assets/TodoList-Demo.gif" alt="Todo-List" />
             <div className="useSkill">
               <h1>
-                <a href="" target="_blank">
-                  Todo-List (新增一個點選我進入 github or 上線的網站)
+                <a
+                  href="https://github.com/freddy990117/Todo_List"
+                  target="_blank"
+                >
+                  Todo-List
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>React & SCSS & Jest</p>
             </div>
           </div>
           <div className="introduce">
             <h1>
-              <a href="" target="_blank">
+              <a
+                href="https://github.com/freddy990117/Todo_List"
+                target="_blank"
+              >
                 Todo-List
               </a>
             </h1>
@@ -300,9 +311,13 @@ const Homepage = () => {
             />
             <div className="useSkill">
               <h1>
-                <a href="" target="_blank">
-                  Fitness Dashboard (新增一個點選我進入 github or 上線的網站)
+                <a
+                  href="https://github.com/freddy990117/Fitness-Dashboard"
+                  target="_blank"
+                >
+                  Fitness Dashboard
                 </a>
+                <span className="tooltip-text">點我進入 Github</span>
               </h1>
               <p>React & SCSS & Firestore</p>
             </div>
@@ -342,6 +357,7 @@ const Homepage = () => {
                 >
                   Taiwan Weather
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>React & SCSS</p>
             </div>
@@ -378,6 +394,7 @@ const Homepage = () => {
                 >
                   Weather App
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>JavaScript & SCSS</p>
             </div>
@@ -409,6 +426,7 @@ const Homepage = () => {
                 >
                   Pexel Picture Search
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>JavaScript & SCSS</p>
             </div>
