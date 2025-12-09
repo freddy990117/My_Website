@@ -185,35 +185,43 @@ const Homepage = () => {
           </nav>
         </header>
       )}
-
       <section id="Picture" className="Picture">
         <section className="introduce">
-          <h1 className="fade-in-text">嗨,我是 Freddy</h1>
+          <h1 className="fade-in-text">嗨,我是 Freddy🧑‍💻</h1>
           <h2 className="fade-in-text">
-            我是一位擁有硬體維修背景、目前積極轉職為前端工程師的開發者。
+            我是位擅長使用 React + Chart.js 的前端開發者
           </h2>
           <p className="fade-in-text">
             我擅長使用 React
             打造互動式網站，重視畫面細節與程式架構，我喜歡將技術轉化為實際解決方案。
+            <br />
+            <br />
+            我具備 API 串接、CRUD、Firebase 開發、模組化元件拆分及 Git Flow
+            的實作經驗。
           </p>
         </section>
         <section className="myPicture"></section>
       </section>
       <section id="aboutMe" className="aboutMe hidden">
         <p>
-          我是一位從硬體維修背景轉職的前端工程師，過去的工作經歷讓我對問題排解與邏輯思維特別擅長，也養成了面對挑戰不輕言放棄的個性。
-          在轉職過程中，我學會了 React、JavaScript、SCSS
-          等前端技術，並完成了多個實戰作品，像是天氣查詢網站、圖片搜尋工具與個人形象頁等，這些作品都包含了
-          API 串接、RWD 設計與 Git Flow 流程管理等要素。
-          我熱愛開發過程中「將想法具象化」的感覺，尤其是能寫出好看又好用的畫面。希望未來能加入一個重視技術成長的團隊，持續累積實力，為產品與使用者創造真正的價值。
+          我是一位從 HelpDesk
+          轉職的前端工程師，在過去工作中培養將複雜問題拆解與驗證的能力，並將解決方案轉化為文件與
+          SOP
+          與團隊分享，這種系統化思維延伸至前端開發，幫助我完成了多個實戰作品，像是健身儀表板表、Todo-List、天氣查詢網站與圖片搜尋網站等，這些作品都包含了
+          CRUD、API 串接、RWD 設計與 Git Flow 流程管理等要素。
+          <br />
+          <br />
+          我喜歡開發過程中「將想法具象化」的感覺，尤其是能寫出好看又好用的畫面。希望未來能加入一個重視技術成長的團隊，持續累積實力，為產品與使用者創造真正的價值。
         </p>
       </section>
       <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
           <img src="./react.svg" alt="React" title="React" />
+          <img src="./typescript.svg" alt="typescript" title="typescript" />
           <img src="./javascript.svg" alt="javascript" />
           <img src="./sass.svg" alt="sass" />
+          <img src="./bootstrap.svg" alt="bootstrap" title="bootstrap" />
           <img src="./html5.svg" alt="html5" />
           <img src="./css.svg" alt="css" />
           <img src="./git.svg" alt="git" />
@@ -221,9 +229,135 @@ const Homepage = () => {
         </div>
       </section>
       <section id="Project" className="Project">
+        {/* Input & Display */}
         <div className="Component hidden" id="FirstProject">
           <div className="project">
-            <img src="./Taiwan_Weather_Intro.png" alt="Taiwan Weather" />
+            <img src="./public/assets/Result-2.png" alt="Input & display" />
+            <div className="useSkill">
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Input-Display"
+                  target="_blank"
+                >
+                  Input & Display
+                </a>
+                <span className="tooltip-text">點我進入 Github </span>
+              </h1>
+              <p>TypeScript & Bootstrap</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>
+              <a
+                href="https://freddy990117.github.io/Input-Display/"
+                target="_blank"
+              >
+                Input & Display
+              </a>
+              <span className="tooltip-text">點我進入線上版</span>
+            </h1>
+            <p>
+              這是一個透過表單讓使用者輸入資料，並以 Accordion
+              方式動態呈現結果的小型互動式網站。
+              <br />
+              <br />
+              此專案主要練習 TypeScript 的類型管理、Bootstrap 元件應用、DOM
+              操作與資料結構設計，讓前端 UI 與表單驗證更具結構化。
+              <br />
+              <br />
+              輸入表單中包含姓名、Email、Phone、Job、留言與多選服務項目，送出後會即時在右側生成獨立的
+              Accordion 卡片，便於閱讀多位使用者的資訊。若沒有資料則顯示「No
+              customer demand」提示。
+            </p>
+          </div>
+        </div>
+        {/* Todo-List */}
+        <div className="Component hidden">
+          <div className="project">
+            <img src="./public/assets/TodoList-Demo.gif" alt="Todo-List" />
+            <div className="useSkill">
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Todo_List"
+                  target="_blank"
+                >
+                  Todo-List
+                </a>
+                <span className="tooltip-text">點我進入 Github </span>
+              </h1>
+              <p>React & SCSS & Jest</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>
+              <a
+                href="https://github.com/freddy990117/Todo_List"
+                target="_blank"
+              >
+                Todo-List
+              </a>
+            </h1>
+            <p>
+              這是一個專注於練習 React CRUD 操作與狀態管理的 Todo List，提升我對
+              React 資料流、元件拆分、狀態更新的掌握度。
+              <br />
+              <br />
+              除了基本新增、刪除、修改與完成標記外，也加入錯誤處理、刪除動畫與
+              UI 優化，提高整體互動感。 <br />
+              <br />
+              專案中特別加入 Jest
+              測試，針對核心功能（新增/刪除/編輯）撰寫單元與元件測試，測試覆蓋率達
+              98.5%。 (未來將改用 React + TypeScript 來撰寫)
+            </p>
+          </div>
+        </div>
+        {/* Fitness Dashboard */}
+        <div className="Component hidden">
+          <div className="project">
+            <img
+              src="./public/assets/Dashboard-Demo.gif"
+              alt="Fitness Dashboard"
+            />
+            <div className="useSkill">
+              <h1>
+                <a
+                  href="https://github.com/freddy990117/Fitness-Dashboard"
+                  target="_blank"
+                >
+                  Fitness Dashboard
+                </a>
+                <span className="tooltip-text">點我進入 Github</span>
+              </h1>
+              <p>React & SCSS & Firestore</p>
+            </div>
+          </div>
+          <div className="introduce">
+            <h1>
+              <a href="" target="_blank">
+                Fitness Dashboard
+              </a>
+            </h1>
+            <p>
+              這是一個整合「體重紀錄」、「訓練項目」以及「蛋白質攝取」的健身管理平台，協助使用者掌握每日訓練狀況並追蹤飲食營養。
+              <br />
+              <br />
+              透過視覺化數據呈現，使用者能輕鬆了解自己的體重趨勢、訓練頻率與攝取量是否達標，提升健身效率。
+              <br />
+              <br />
+              此專案以模組化設計為核心，拆分多個可重複使用的 UI
+              元件（Sidebar、Card、Chart）。使用 Firebase
+              提供會員登入、雲端資料儲存與 CRUD 處理，並利用 Chart.js
+              呈現體重變化折線圖。{" "}
+            </p>
+          </div>
+        </div>
+        {/* Taiwan Weather */}
+        <div className="Component hidden">
+          <div className="project">
+            <img
+              src="./public/assets/TaiwanWeather-Demo.gif"
+              alt="Taiwan Weather"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -232,12 +366,20 @@ const Homepage = () => {
                 >
                   Taiwan Weather
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>React & SCSS</p>
             </div>
           </div>
           <div className="introduce">
-            <h1>Taiwan Weather</h1>
+            <h1>
+              <a
+                href="https://github.com/freddy990117/Taiwan-Weather"
+                target="_blank"
+              >
+                Taiwan Weather
+              </a>
+            </h1>
             <p>
               這是一個針對台灣地區設計的天氣查詢網站，使用政府開放資料 API
               顯示各縣市的天氣預報、氣溫、降雨機率與紫外線指數等資訊。使用者可以選擇不同地區，查看接下來幾天的天氣變化，還能透過圖表清楚掌握趨勢。
@@ -249,9 +391,10 @@ const Homepage = () => {
             </p>
           </div>
         </div>
+        {/* Weather App */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Weather_App.png" alt="Weather App" />
+            <img src="./public/assets/WeatherApp-Demo.gif" alt="Weather App" />
             <div className="useSkill">
               <h1>
                 <a
@@ -260,6 +403,7 @@ const Homepage = () => {
                 >
                   Weather App
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>JavaScript & SCSS</p>
             </div>
@@ -279,6 +423,7 @@ const Homepage = () => {
             </p>
           </div>
         </div>
+        {/* Pexel Picture Search */}
         <div className="Component hidden">
           <div className="project">
             <img src="./Pexel_Picture_Intro.png" alt="Pexel Picture" />
@@ -290,6 +435,7 @@ const Homepage = () => {
                 >
                   Pexel Picture Search
                 </a>
+                <span className="tooltip-text">點我進入 Github </span>
               </h1>
               <p>JavaScript & SCSS</p>
             </div>
@@ -305,37 +451,6 @@ const Homepage = () => {
               請求，並透過 React Router
               進行頁面路由切換。整體設計強調簡潔、直覺的搜尋體驗，並處理了圖片載入時的
               loading 狀態，讓使用者在等待資料時也能有良好的操作感受。
-            </p>
-          </div>
-        </div>
-        <div className="Component hidden">
-          <div className="project">
-            <img
-              src="Personal_Page_Intro.jpg"
-              alt="Personal Portfolio Website"
-            />
-            <div className="useSkill">
-              <h1>
-                <a
-                  href="https://github.com/freddy990117/Personal-Portfolio-Website"
-                  target="_blank"
-                >
-                  Personal Portfolio Website
-                </a>
-              </h1>
-              <p>React & SCSS</p>
-            </div>
-          </div>
-          <div className="introduce">
-            <h1>Personal Portfolio Website</h1>
-            <p>
-              這是我設計並開發的個人作品網站，用來介紹自己的背景、技能與開發專案，目的是讓訪客快速了解我的專業能力與開發風格。網站內容包含首頁動畫、自我介紹、技能圖示區塊、專案介紹以及聯絡表單。
-              <br />
-              <br />
-              在開發上，我採用 React 與 SCSS 打造整體版面與互動效果，並透過 RWD
-              響應式設計讓網站能在電腦與手機上都能流暢瀏覽。
-              <br />
-              (但因為成果不滿意，所以做了一個新的自我介紹網頁)
             </p>
           </div>
         </div>
