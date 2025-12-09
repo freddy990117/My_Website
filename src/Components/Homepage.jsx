@@ -189,7 +189,7 @@ const Homepage = () => {
         <section className="introduce">
           <h1 className="fade-in-text">嗨,我是 Freddy🧑‍💻</h1>
           <h2 className="fade-in-text">
-            我是位擅長使用 React (TS) + Chart.js 的前端開發者
+            我是位擅長使用 React + Chart.js 的前端開發者
           </h2>
           <p className="fade-in-text">
             我擅長使用 React
@@ -209,6 +209,7 @@ const Homepage = () => {
           SOP
           與團隊分享，這種系統化思維延伸至前端開發，幫助我完成了多個實戰作品，像是健身儀表板表、Todo-List、天氣查詢網站與圖片搜尋網站等，這些作品都包含了
           CRUD、API 串接、RWD 設計與 Git Flow 流程管理等要素。
+          <br />
           <br />
           我喜歡開發過程中「將想法具象化」的感覺，尤其是能寫出好看又好用的畫面。希望未來能加入一個重視技術成長的團隊，持續累積實力，為產品與使用者創造真正的價值。
         </p>
@@ -246,7 +247,15 @@ const Homepage = () => {
             </div>
           </div>
           <div className="introduce">
-            <h1>Input & Display</h1>
+            <h1>
+              <a
+                href="https://freddy990117.github.io/Input-Display/"
+                target="_blank"
+              >
+                Input & Display
+              </a>
+              <span className="tooltip-text">點我進入線上版</span>
+            </h1>
             <p>
               這是一個透過表單讓使用者輸入資料，並以 Accordion
               方式動態呈現結果的小型互動式網站。
