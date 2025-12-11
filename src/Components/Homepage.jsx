@@ -232,7 +232,7 @@ const Homepage = () => {
         {/* Input & Display */}
         <div className="Component hidden" id="FirstProject">
           <div className="project">
-            <img src="./public/assets/Result-2.png" alt="Input & display" />
+            <img src="./Result-2.png" alt="Input & display" />
             <div className="useSkill">
               <h1>
                 <a
@@ -274,7 +274,7 @@ const Homepage = () => {
         {/* Todo-List */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./public/assets/TodoList-Demo.gif" alt="Todo-List" />
+            <img src="./TodoList-Demo.gif" alt="Todo-List" />
             <div className="useSkill">
               <h1>
                 <a
@@ -314,10 +314,7 @@ const Homepage = () => {
         {/* Fitness Dashboard */}
         <div className="Component hidden">
           <div className="project">
-            <img
-              src="./public/assets/Dashboard-Demo.gif"
-              alt="Fitness Dashboard"
-            />
+            <img src="./Dashboard-Demo.gif" alt="Fitness Dashboard" />
             <div className="useSkill">
               <h1>
                 <a
@@ -354,10 +351,7 @@ const Homepage = () => {
         {/* Taiwan Weather */}
         <div className="Component hidden">
           <div className="project">
-            <img
-              src="./public/assets/TaiwanWeather-Demo.gif"
-              alt="Taiwan Weather"
-            />
+            <img src="./TaiwanWeather-Demo.gif" alt="Taiwan Weather" />
             <div className="useSkill">
               <h1>
                 <a
@@ -394,7 +388,7 @@ const Homepage = () => {
         {/* Weather App */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./public/assets/WeatherApp-Demo.gif" alt="Weather App" />
+            <img src="./WeatherApp-Demo.gif" alt="Weather App" />
             <div className="useSkill">
               <h1>
                 <a
