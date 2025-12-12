@@ -87,7 +87,7 @@ header {
   .myPicture {
     margin-right: 8rem;
     flex: 4;
-    background-image: url(../public/image.png);
+    background-image: url(./image.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
