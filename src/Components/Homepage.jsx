@@ -232,7 +232,11 @@ const Homepage = () => {
         {/* Input & Display */}
         <div className="Component hidden" id="FirstProject">
           <div className="project">
-            <img src="./Result-2.png" alt="Input & display" />
+            <img
+              src="./Input_Display_Intro.webp"
+              alt="Input & display"
+              loading="lazy"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -274,7 +278,7 @@ const Homepage = () => {
         {/* Todo-List */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./TodoList-Demo.gif" alt="Todo-List" />
+            <img src="./Todo_Intro.webp" alt="Todo-List" loading="lazy" />
             <div className="useSkill">
               <h1>
                 <a
@@ -314,7 +318,11 @@ const Homepage = () => {
         {/* Fitness Dashboard */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Dashboard-Demo.gif" alt="Fitness Dashboard" />
+            <img
+              src="./Dashboard_intro.webp"
+              alt="Fitness Dashboard"
+              loading="lazy"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -351,7 +359,11 @@ const Homepage = () => {
         {/* Taiwan Weather */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./TaiwanWeather-Demo.gif" alt="Taiwan Weather" />
+            <img
+              src="./Taiwan_Weather_Intro.webp"
+              alt="Taiwan Weather"
+              loading="lazy"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -388,7 +400,7 @@ const Homepage = () => {
         {/* Weather App */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./WeatherApp-Demo.gif" alt="Weather App" />
+            <img src="./Weather_App.webp" alt="Weather App" loading="lazy" />
             <div className="useSkill">
               <h1>
                 <a
@@ -420,7 +432,11 @@ const Homepage = () => {
         {/* Pexel Picture Search */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Pexel_Picture_Intro.png" alt="Pexel Picture" />
+            <img
+              src="./Pexel_Picture_Intro.webp"
+              alt="Pexel Picture"
+              loading="lazy"
+            />
             <div className="useSkill">
               <h1>
                 <a
