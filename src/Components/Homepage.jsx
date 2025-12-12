@@ -232,7 +232,11 @@ const Homepage = () => {
         {/* Input & Display */}
         <div className="Component hidden" id="FirstProject">
           <div className="project">
-            <img src="./Result-2.png" alt="Input & display" loading="lazy" />
+            <img
+              src="./Input_Display_Intro.webp"
+              alt="Input & display"
+              loading="lazy"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -274,7 +278,7 @@ const Homepage = () => {
         {/* Todo-List */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Todo_Intro.png" alt="Todo-List" loading="lazy" />
+            <img src="./Todo_Intro.webp" alt="Todo-List" loading="lazy" />
             <div className="useSkill">
               <h1>
                 <a
@@ -315,7 +319,7 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./Dashboard_intro.png"
+              src="./Dashboard_intro.webp"
               alt="Fitness Dashboard"
               loading="lazy"
             />
@@ -356,7 +360,7 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./Taiwan_Weather_Intro.png"
+              src="./Taiwan_Weather_Intro.webp"
               alt="Taiwan Weather"
               loading="lazy"
             />
@@ -396,7 +400,7 @@ const Homepage = () => {
         {/* Weather App */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Weather_App.png" alt="Weather App" loading="lazy" />
+            <img src="./Weather_App.webp" alt="Weather App" loading="lazy" />
             <div className="useSkill">
               <h1>
                 <a
@@ -429,7 +433,7 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./Pexel_Picture_Intro.png"
+              src="./Pexel_Picture_Intro.webp"
               alt="Pexel Picture"
               loading="lazy"
             />
