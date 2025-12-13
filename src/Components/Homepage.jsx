@@ -200,7 +200,9 @@ const Homepage = () => {
             的實作經驗。
           </p>
         </section>
-        <section className="myPicture"></section>
+        <section className="myPicture">
+          <img src="./image.png" alt="My-self-Picture" />
+        </section>
       </section>
       <section id="aboutMe" className="aboutMe hidden">
         <p>
