@@ -201,7 +201,7 @@ const Homepage = () => {
           </p>
         </section>
         <section className="myPicture">
-          <img src="./image.png" alt="My-self-Picture" />
+          <img src="./images/image.png" alt="My-self-Picture" />
         </section>
       </section>
       <section id="aboutMe" className="aboutMe hidden">
@@ -219,15 +219,19 @@ const Homepage = () => {
       <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
-          <img src="./react.svg" alt="React" title="React" />
-          <img src="./typescript.svg" alt="typescript" title="typescript" />
-          <img src="./javascript.svg" alt="javascript" />
-          <img src="./sass.svg" alt="sass" />
-          <img src="./bootstrap.svg" alt="bootstrap" title="bootstrap" />
-          <img src="./html5.svg" alt="html5" />
-          <img src="./css.svg" alt="css" />
-          <img src="./git.svg" alt="git" />
-          <img src="./github.svg" alt="github" />
+          <img src="./icons/react.svg" alt="React" title="React" />
+          <img
+            src="./icons/typescript.svg"
+            alt="typescript"
+            title="typescript"
+          />
+          <img src="./icons/javascript.svg" alt="javascript" />
+          <img src="./icons/sass.svg" alt="sass" />
+          <img src="./icons/bootstrap.svg" alt="bootstrap" title="bootstrap" />
+          <img src="./icons/html5.svg" alt="html5" />
+          <img src="./icons/css.svg" alt="css" />
+          <img src="./icons/git.svg" alt="git" />
+          <img src="./icons/github.svg" alt="github" />
         </div>
       </section>
       <section id="Project" className="Project">
@@ -235,7 +239,7 @@ const Homepage = () => {
         <div className="Component hidden" id="FirstProject">
           <div className="project">
             <img
-              src="./Input_Display_Intro.webp"
+              src="./images/1280/Input_Display_Intro.webp"
               alt="Input & display"
               loading="lazy"
             />
@@ -280,7 +284,11 @@ const Homepage = () => {
         {/* Todo-List */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Todo_Intro.webp" alt="Todo-List" loading="lazy" />
+            <img
+              src="./images/1280/Todo_Intro.webp"
+              alt="Todo-List"
+              loading="lazy"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -321,7 +329,7 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./Dashboard_intro.webp"
+              src="./images/1280/Dashboard_intro.webp"
               alt="Fitness Dashboard"
               loading="lazy"
             />
@@ -362,7 +370,7 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./Taiwan_Weather_Intro.webp"
+              src="./images/1280/Taiwan_Weather_Intro.webp"
               alt="Taiwan Weather"
               loading="lazy"
             />
@@ -402,7 +410,11 @@ const Homepage = () => {
         {/* Weather App */}
         <div className="Component hidden">
           <div className="project">
-            <img src="./Weather_App.webp" alt="Weather App" loading="lazy" />
+            <img
+              src="./images/1280/Weather_App.webp"
+              alt="Weather App"
+              loading="lazy"
+            />
             <div className="useSkill">
               <h1>
                 <a
@@ -435,7 +447,7 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./Pexel_Picture_Intro.webp"
+              src="./images/1280/Pexel_Picture_Intro.webp"
               alt="Pexel Picture"
               loading="lazy"
             />
@@ -474,19 +486,23 @@ const Homepage = () => {
             href="https://github.com/freddy990117?tab=repositories"
             target="_blank"
           >
-            <img className="logo" src="github.svg" alt="github" />
+            <img className="logo" src="./icons/github.svg" alt="github" />
           </a>
           <a
             href="https://www.linkedin.com/in/lee-jay-chang-24735a266/"
             target="_blank"
           >
-            <img className="logo-linkedin" src="Linkedin.svg" alt="linkedin" />
+            <img
+              className="logo-linkedin"
+              src="./icons/Linkedin.svg"
+              alt="linkedin"
+            />
           </a>
           <a href="mailto:freddy990117@gmail.com?subject=你好，我想合作&body=請在此留下你的訊息">
-            <img className="logo" src="gmail.svg" alt="gmail" />
+            <img className="logo" src="./icons/gmail.svg" alt="gmail" />
           </a>
           <a href="https://www.instagram.com/___leejay___/" target="_blank">
-            <img className="logo" src="instagram.svg" alt="instagram" />
+            <img className="logo" src="./icons/instagram.svg" alt="instagram" />
           </a>
         </div>
       </footer>
