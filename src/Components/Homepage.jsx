@@ -239,7 +239,15 @@ const Homepage = () => {
         <div className="Component hidden" id="FirstProject">
           <div className="project">
             <img
-              src="./images/1280/Input_Display_Intro.webp"
+              // 預設顯示 640 的圖片 （因為圖片只佔了不到畫面的一半，設定 640 即可）＊如果要設定為 1280 最好要佔大部分＊
+              src="./images/640/Input-display.640.webp"
+              // 實際顯示的圖片像素全部交給 srcSet 瀏覽器去計算 （給瀏覽器自行去運算 DPR）
+              srcSet="./images/360/Input_Display_Intro-360.webp 360w,
+                      ./images/640/Input-display.640.webp 640w,
+                      ./images/1280/Input_Display_Intro.webp 1280w"
+              // 如果顯示畫面小於 650px 時，顯示的寬度是 80 viewports，將圖片固定在 640 px，實際顯示圖片會交給 setSrc 管理
+              // 因為我想達到「手機時顯示 360」的這個效果，所以我使用 80vw
+              sizes="(max-width: 650px) 80vw,640px"
               alt="Input & display"
               loading="lazy"
             />
