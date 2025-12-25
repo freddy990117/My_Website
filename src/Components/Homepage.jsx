@@ -202,7 +202,7 @@ const Homepage = () => {
         </section>
         <section className="myPicture">
           <img
-            src="assets/images/image.png"
+            src="./assets/images/image.png"
             alt="My-self-Picture"
             loading="eager"
           />
@@ -223,23 +223,23 @@ const Homepage = () => {
       <section id="Skill" className="Skill hidden">
         <h2>Front-End</h2>
         <div className="images">
-          <img src="assets/icons/react.svg" alt="React" title="React" />
+          <img src="./assets/icons/react.svg" alt="React" title="React" />
           <img
-            src="assets/icons/typescript.svg"
+            src="./assets/icons/typescript.svg"
             alt="typescript"
             title="typescript"
           />
-          <img src="assets/icons/javascript.svg" alt="javascript" />
-          <img src="assets/icons/sass.svg" alt="sass" />
+          <img src="./assets/icons/javascript.svg" alt="javascript" />
+          <img src="./assets/icons/sass.svg" alt="sass" />
           <img
-            src="assets/icons/bootstrap.svg"
+            src="./assets/icons/bootstrap.svg"
             alt="bootstrap"
             title="bootstrap"
           />
-          <img src="assets/icons/html5.svg" alt="html5" />
-          <img src="assets/icons/css.svg" alt="css" />
-          <img src="assets/icons/git.svg" alt="git" />
-          <img src="assets/icons/github.svg" alt="github" />
+          <img src="./assets/icons/html5.svg" alt="html5" />
+          <img src="./assets/icons/css.svg" alt="css" />
+          <img src="./assets/icons/git.svg" alt="git" />
+          <img src="./assets/icons/github.svg" alt="github" />
         </div>
       </section>
       <section id="Project" className="Project">
@@ -248,11 +248,11 @@ const Homepage = () => {
           <div className="project">
             <img
               // 預設顯示 640 的圖片 （因為圖片只佔了不到畫面的一半，設定 640 即可）＊如果要設定為 1280 最好要佔大部分＊
-              src="assets/images/640/Input-display.640.webp"
+              src="./assets/images/640/Input-display.640.webp"
               // 實際顯示的圖片像素全部交給 srcSet 瀏覽器去計算 （給瀏覽器自行去運算 DPR）
-              srcSet="assets/images/360/Input_Display_Intro-360.webp 360w,
-                      assets/images/640/Input-display.640.webp 640w,
-                      assets/images/1280/Input_Display_Intro.webp 1280w"
+              srcSet="./assets/images/360/Input_Display_Intro-360.webp 360w,
+                      ./assets/images/640/Input-display.640.webp 640w,
+                      ./assets/images/1280/Input_Display_Intro.webp 1280w"
               // 如果顯示畫面小於 650px 時，顯示的寬度是 80 viewports，將圖片固定在 640 px，實際顯示圖片會交給 setSrc 管理
               // 因為我想達到「手機時顯示 360」的這個效果，所以我使用 80vw
               sizes="(max-width: 650px) 80vw,640px"
@@ -301,10 +301,10 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="assets/images/640/Todo-List.640.webp"
-              srcSet="assets/images/360/Todo_Intro-360.webp 360w,
-                      assets/images/640/Todo-List.640.webp 640w,
-                      assets/images/1280/Todo_Intro.webp 1280w"
+              src="./assets/images/640/Todo-List.640.webp"
+              srcSet="./assets/images/360/Todo_Intro-360.webp 360w,
+                      ./assets/images/640/Todo-List.640.webp 640w,
+                      ./assets/images/1280/Todo_Intro.webp 1280w"
               sizes="(max-width:650px) 80vw,640px"
               alt="Todo-List"
               loading="lazy"
@@ -349,10 +349,10 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="assets/images/640/Fitness-Dashboard.640.webp"
-              srcSet="assets/images/360/Dashboard_intro-360.webp 360w,
-                      assets/images/640/Fitness-Dashboard.640.webp 640w,
-                      assets/images/1280/Dashboard_intro.webp 1280w"
+              src="./assets/images/640/Fitness-Dashboard.640.webp"
+              srcSet="./assets/images/360/Dashboard_intro-360.webp 360w,
+                      ./assets/images/640/Fitness-Dashboard.640.webp 640w,
+                      ./assets/images/1280/Dashboard_intro.webp 1280w"
               sizes="(max-width:650px) 80vw,640px"
               alt="Fitness Dashboard"
               loading="lazy"
@@ -394,10 +394,10 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="assets/images/640/Taiwan-Weather.640.webp"
-              srcSet="assets/images/360/Taiwan_Weather_Intro-360.webp 360w,
-                      assets/images/640/Taiwan-Weather.640.webp 640w,
-                      assets/images/1280/Taiwan_Weather_Intro-360.webp 1280w"
+              src="./assets/images/640/Taiwan-Weather.640.webp"
+              srcSet="./assets/images/360/Taiwan_Weather_Intro-360.webp 360w,
+                      ./assets/images/640/Taiwan-Weather.640.webp 640w,
+                      ./assets/images/1280/Taiwan_Weather_Intro-360.webp 1280w"
               sizes="(max-width:650px) 80vw,640px"
               alt="Taiwan Weather"
               loading="lazy"
@@ -439,10 +439,10 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="assets/images/Weather-App.640.webp"
-              srcSet="assets/images/360/Weather_App-360.webp 360w,
-                      assets/images/640/Weather-App.640.webp 640w,
-                      assets/images/1280/Weather_App.webp 1280w"
+              src="./assets/images/Weather-App.640.webp"
+              srcSet="./assets/images/360/Weather_App-360.webp 360w,
+                      ./assets/images/640/Weather-App.640.webp 640w,
+                      ./assets/images/1280/Weather_App.webp 1280w"
               sizes="(max-width:650px) 80vw,640px"
               alt="Weather App"
               loading="lazy"
@@ -479,10 +479,10 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="assets/images/640/Pexel-Search.640.webp"
-              srcSet="assets/images/360/Pexel_Picture_Intro-360.webp 360w,
-                      assets/images/640/Pexel-Search.640.webp 640w,
-                      assets/images/1280/Pexel_Picture_Intro.webp 1280w"
+              src="./assets/images/640/Pexel-Search.640.webp"
+              srcSet="./assets/images/360/Pexel_Picture_Intro-360.webp 360w,
+                      ./assets/images/640/Pexel-Search.640.webp 640w,
+                      ./assets/images/1280/Pexel_Picture_Intro.webp 1280w"
               sizes="(max-width:650px) 80vw,640px"
               alt="Pexel Picture"
               loading="lazy"
@@ -522,7 +522,11 @@ const Homepage = () => {
             href="https://github.com/freddy990117?tab=repositories"
             target="_blank"
           >
-            <img className="logo" src="assets/icons/github.svg" alt="github" />
+            <img
+              className="logo"
+              src="./assets/icons/github.svg"
+              alt="github"
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/lee-jay-chang-24735a266/"
@@ -530,17 +534,17 @@ const Homepage = () => {
           >
             <img
               className="logo-linkedin"
-              src="assets/icons/Linkedin.svg"
+              src="./assets/icons/Linkedin.svg"
               alt="linkedin"
             />
           </a>
           <a href="mailto:freddy990117@gmail.com?subject=你好，我想合作&body=請在此留下你的訊息">
-            <img className="logo" src="assets/icons/gmail.svg" alt="gmail" />
+            <img className="logo" src="./assets/icons/gmail.svg" alt="gmail" />
           </a>
           <a href="https://www.instagram.com/___leejay___/" target="_blank">
             <img
               className="logo"
-              src="assets/icons/instagram.svg"
+              src="./assets/icons/instagram.svg"
               alt="instagram"
             />
           </a>
