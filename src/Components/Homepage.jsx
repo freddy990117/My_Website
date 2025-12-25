@@ -225,7 +225,7 @@ const Homepage = () => {
             alt="typescript"
             title="typescript"
           />
-          <img src="./icons/javascript.svg" alt="javascript" />
+          <img src="/assets/icons/javascript.svg" alt="javascript" />
           <img src="./icons/sass.svg" alt="sass" />
           <img src="./icons/bootstrap.svg" alt="bootstrap" title="bootstrap" />
           <img src="./icons/html5.svg" alt="html5" />
