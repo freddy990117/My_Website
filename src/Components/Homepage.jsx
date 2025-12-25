@@ -201,7 +201,7 @@ const Homepage = () => {
           </p>
         </section>
         <section className="myPicture">
-          <img src="./images/image.png" alt="My-self-Picture" />
+          <img src="./images/image.png" alt="My-self-Picture" loading="eager" />
         </section>
       </section>
       <section id="aboutMe" className="aboutMe hidden">
