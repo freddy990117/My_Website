@@ -293,7 +293,11 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./images/1280/Todo_Intro.webp"
+              src="./images/640/Todo-List.640.webp"
+              srcSet="./images/360/Todo_Intro-360.webp 360w,
+                      ./images/640/Todo-List.640.webp 640w,
+                      ./images/1280/Todo_Intro.webp 1280w"
+              sizes="(max-width:650px) 80vw,640px"
               alt="Todo-List"
               loading="lazy"
             />
@@ -337,7 +341,11 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./images/1280/Dashboard_intro.webp"
+              src="./images/640/Fitness-Dashboard.640.webp"
+              srcSet="./images/360/Dashboard_intro-360.webp 360w,
+                      ./images/640/Fitness-Dashboard.640.webp 640w,
+                      ./images/1280/Dashboard_intro.webp 1280w"
+              sizes="(max-width:650px) 80vw,640px"
               alt="Fitness Dashboard"
               loading="lazy"
             />
@@ -378,7 +386,11 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./images/1280/Taiwan_Weather_Intro.webp"
+              src="./images/640/Taiwan-Weather.640.webp"
+              srcSet="./images/360/Taiwan_Weather_Intro-360.webp 360w,
+                      ./images/640/Taiwan-Weather.640.webp 640w,
+                      ./images/1280/Taiwan_Weather_Intro-360.webp 1280w"
+              sizes="(max-width:650px) 80vw,640px"
               alt="Taiwan Weather"
               loading="lazy"
             />
@@ -419,7 +431,11 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./images/1280/Weather_App.webp"
+              src="./images/Weather-App.640.webp"
+              srcSet="./images/360/Weather_App-360.webp 360w,
+                      ./images/640/Weather-App.640.webp 640w,
+                      ./images/1280/Weather_App.webp 1280w"
+              sizes="(max-width:650px) 80vw,640px"
               alt="Weather App"
               loading="lazy"
             />
@@ -455,7 +471,11 @@ const Homepage = () => {
         <div className="Component hidden">
           <div className="project">
             <img
-              src="./images/1280/Pexel_Picture_Intro.webp"
+              src="./images/640/Pexel-Search.640.webp"
+              srcSet="./images/360/Pexel_Picture_Intro-360.webp 360w,
+                      ./images/640/Pexel-Search.640.webp 640w,
+                      ./images/1280/Pexel_Picture_Intro.webp 1280w"
+              sizes="(max-width:650px) 80vw,640px"
               alt="Pexel Picture"
               loading="lazy"
             />
