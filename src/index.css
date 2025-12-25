@@ -334,6 +334,7 @@ header {
       padding: 1rem 3rem;
       align-items: center;
       text-align: center;
+      min-height: 100vh;
       p {
         margin-top: 3rem;
       }
