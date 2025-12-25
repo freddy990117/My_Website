@@ -1,4 +1,4 @@
-import Rect, { useState, useEffect, useLayoutEffect, useRef } from "react";
+import Rect, { useState, useEffect, useLayoutEffect } from "react";
 
 // 建立了 branch develop 來開發
 const Homepage = () => {

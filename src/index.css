@@ -87,8 +87,8 @@ header {
   .myPicture {
     flex: 4;
     img {
-      width: 100%;
-      height: 100%;
+      width: 40vw;
+      height: 95vh;
       padding: 4rem;
     }
   }
@@ -366,9 +366,15 @@ header {
       display: flex;
       flex-direction: column;
       text-align: center;
-      .useSkill {
-        p {
-          align-self: center;
+      .project {
+        img {
+          width: 100%;
+          height: 132px;
+        }
+        .useSkill {
+          p {
+            align-self: center;
+          }
         }
       }
       .introduce {
