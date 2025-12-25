@@ -123,6 +123,8 @@ header {
       padding: 1rem;
       margin: 0 0.5rem;
       cursor: pointer;
+      height: 10vh;
+      width: 10vh;
       transition: all 0.5s ease;
       &:hover {
         background-color: #4f83cc;
@@ -355,6 +357,7 @@ header {
       padding: 1rem;
       img {
         height: 10vh;
+        width: 10vh;
       }
     }
   }
@@ -424,6 +427,14 @@ header {
           margin: 2rem 0;
           font-size: 1.3rem;
         }
+      }
+    }
+  }
+  .Skill {
+    .images {
+      img {
+        height: 10vh;
+        width: 10vh;
       }
     }
   }
